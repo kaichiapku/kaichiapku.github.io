@@ -1,24 +1,31 @@
 ---
-title: "Markdown Extra Components"
+title: "gem install github-pages失敗的問題"
 layout: post
-date: 2016-02-24 22:48
+date: 2017-03-01
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
-- markdown
-- components
-- extra
+- jekyll
+- github-pages
 category: blog
-author: jamesfoster
-description: Markdown summary with different options
-# jemoji: '<img class="emoji" title=":ramen:" alt=":ramen:" src="https://assets.github.com/images/icons/emoji/unicode/1f35c.png" height="20" width="20" align="absmiddle">'
+author: andy
+description: 安裝github-pages，需要連帶安裝nokogiri，此篇blog旨在解決Installing nokogiri 1.6.8.1 with native extensions 遇到的問題
+
 ---
 
-## Summary:
+## Introduction:
 
-You can pick as item to see how to apply in markdown.
+安裝github-pages，需要連帶安裝nokogiri，此篇blog旨在解決Installing nokogiri 1.6.8.1 with native extensions 遇到的問題
 
-#### Especial Elements
+## Solution:
+
+安裝時，可以改成使用以下指令
+{% highlight html %}
+gem install nokogiri -v 1.6.8.1 -- --use-system-libraries 
+{% endhighlight %}
+
+
+<!--#### Especial Elements
 - [Evidence](#evidence)
 - [Side-by-Side](#side-by-side)
 - [Star](#star)
@@ -194,4 +201,4 @@ Do you want some videos? Youtube, Vimeo or Vevo? Copy the embed code and paste o
 [3]: http://www.markitdown.net/
 [4]: http://daringfireball.net/projects/markdown/basics
 [5]: http://daringfireball.net/projects/markdown/syntax
-[6]: http://kune.fr/wp-content/uploads/2013/10/ghost-blog.jpg
+[6]: http://kune.fr/wp-content/uploads/2013/10/ghost-blog.jpg-->
